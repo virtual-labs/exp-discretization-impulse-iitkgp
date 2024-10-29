@@ -83,8 +83,8 @@ var Rt2;
 			var e0=math.subtract(b1,math.multiply(a1,math.divide(b0,a0)));
 			var e1=math.subtract(b2,math.multiply(a2,math.divide(b0,a0)));
 			
-			var A1=math.divide(math.add(math.multiply(e0,R1),e1),math.subtract(R1,R2));
-			var A2=math.divide(math.add(math.multiply(e0,R2),e1),math.subtract(R2,R1));
+			var A1=math.divide(math.add(math.multiply(e0,R1),-e1),math.subtract(R1,R2));
+			var A2=math.divide(math.add(math.multiply(e0,R2),-e1),math.subtract(R2,R1));
 			
 			console.log(e0);
 			console.log(e1);
@@ -154,18 +154,18 @@ function IIM(){
 			
 			var e0=math.subtract(b1,math.multiply(a1,math.divide(b0,a0)));
 			var e1=math.subtract(b2,math.multiply(a2,math.divide(b0,a0)));
-			var A1=math.divide(math.add(math.multiply(e0,R1),e1),math.subtract(R1,R2));
-			var A2=math.divide(math.add(math.multiply(e0,R2),e1),math.subtract(R2,R1));
+			var A1=math.divide(math.add(math.multiply(e0,R1),-e1),math.subtract(R1,R2));
+			var A2=math.divide(math.add(math.multiply(e0,R2),-e1),math.subtract(R2,R1));
 	
 	var TA1=math.divide(math.round(math.multiply(math.multiply(T,A1),100)),100);
 	var TA2=math.divide(math.round(math.multiply(math.multiply(T,A2),100)),100);
-	var eTp1=math.divide(math.round(math.multiply(math.exp(math.multiply(T,-R1)),100)),100);
-	var eTp2=math.divide(math.round(math.multiply(math.exp(math.multiply(T,-R2)),100)),100);
+	var eTp1=math.divide(math.round(math.multiply(math.exp(math.multiply(T,R1)),100)),100);
+	var eTp2=math.divide(math.round(math.multiply(math.exp(math.multiply(T,R2)),100)),100);
 	var c1=math.divide(math.round(math.multiply(math.add(eTp1,eTp2),100)),100);
 	var c2=math.divide(math.round(math.multiply(math.multiply(eTp1,eTp2),100)),100);
-	var d0=math.divide(math.round(math.multiply(math.add(b0,TA1,TA2),100)),100);
-	var d1=math.divide(math.round(math.multiply(math.add(b0,math.multiply(TA1,eTp2),math.multiply(TA2,eTp1)),100)),100);
-	var d2=math.divide(math.round(math.multiply(math.multiply(b0,eTp1,eTp2),100)),100);
+	var d0=math.divide(math.round(math.multiply(math.add(math.multiply(T,0.5,b0),TA1,TA2),100)),100);
+	var d1=math.divide(math.round(math.multiply(math.add(-math.multiply(T,0.5,b0,math.add(eTp1,eTp2)),-math.multiply(TA1,eTp2),-math.multiply(TA2,eTp1)),100)),100);
+	var d2=math.divide(math.round(math.multiply(math.multiply(math.multiply(T,0.5,b0),eTp1,eTp2),100)),100);
 	
 	        
 			document.getElementById('tfn13').value = b0;
