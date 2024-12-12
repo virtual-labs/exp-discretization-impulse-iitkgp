@@ -46,7 +46,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Q5. What is the discretization of <img src=./images/poq5.png>",
+      "question": "Q5. What is the discretization of <img src=./images/poq5.png> with 0.1 sampling time using Tustin method?",
       "answers": {
         "a": "<img src=./images/poq5a.png>",
         "b": "<img src=./images/poq5b.png>",
