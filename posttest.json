@@ -1,0 +1,62 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1. The Tustin approximation method relates the s-domain and z-domain transfer function using the following approximation:",
+      "answers": {
+        "a": "<img src=./images/poq1a.png>",
+        "b": "<img src=./images/poq1b.png>",
+        "c": " <img src=./images/poq1c.png>",
+        "d": "<img src=./images/poq1d.png>"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2. What are the roots of the characteristic equation of the following closed loop transfer function <img src=./images/poq2.png> ?",
+      "answers": {
+        "a": "-1, -3, -4",
+        "b": "3, 4",
+        "c": "-3, -4",
+        "d": "1, 3, 4"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q3. What is the partial fraction expansion of <img src=./images/poq3.png> ?",
+      "answers": {
+        "a": "<img src=./images/poq3a.png>",
+        "b": "<img src=./images/poq3b.png>",
+        "c": "<img src=./images/poq3c.png>",
+        "d": "<img src=./images/poq3d.png>"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q4. What is the discretization of <img src=./images/poq4.png> with 0.1 sampling time using Impulse Invariance method?",
+      "answers": {
+        "a": "<img src=./images/poq4a.png>",
+        "b": "<img src=./images/poq4b.png>",
+        "c": "<img src=./images/poq4c.png>",
+        "d": "<img src=./images/poq4d.png>"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q5. What is the discretization of <img src=./images/poq5.png> with 0.1 sampling time using Tustin method?",
+      "answers": {
+        "a": "<img src=./images/poq5a.png>",
+        "b": "<img src=./images/poq5b.png>",
+        "c": "<img src=./images/poq5c.png>",
+        "d": "<img src=./images/poq5d.png>"
+        
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }
+    
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Q1. Poles of the equation <img src='./images/prq.png'/> are:",
+      "answers": {
+        "a": "<img src='./images/prq1a.png'/>",
+        "b": "<img src='./images/prq1b.png'/>",
+        "c": "<img src='./images/prq1c.png'/>",
+        "d": "<img src='./images/prq1d.png'/>"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2. What is the z transform of <img src='./images/prq2.png'/>",
+      "answers": {
+        "a": "<img src='./images/prq2a.png'/>",
+        "b": "<img src='./images/prq2b.png'/>",
+        "c": "<img src='./images/prq2c.png'/>",
+        "d": "<img src='./images/prq2d.png'/>"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q3. Discretization is the process of ________",
+      "answers": {
+        "a": "Transferring discrete functions into continuous functions",
+        "b": "Transferring continuous functions into discrete functions",
+        "c": "Transferring discrete functions into equivalent discrete functions",
+        "d": "Transferring continuous functions into equivalent continuous function"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q4. Which of the following is not the discretization method?",
+      "answers": {
+        "a": "Zero order Hold method",
+        "b": "First order Hold method",
+        "c": "Tustin method ",
+        "d": "Pole-Zero replacement method"
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q5. Tustin approximation is also known as:",
+      "answers": {
+        "a": "Least square approximation",
+        "b": "Bilinear approximation",
+        "c": "Impulse invariance method",
+        "d": "Pole-Zero match"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+	
+	
+  ]
+}
