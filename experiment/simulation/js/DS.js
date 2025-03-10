@@ -14,12 +14,13 @@ function inputChange(){
 
 function refresh(){
 //location.reload();	
-document.getElementById('plotbucket').style.display = "none";
+/* document.getElementById('plotbucket').style.display = "none";
 document.getElementById('chartContainer1').style.display = "none";
 document.getElementById('chartContainer2').style.display = "none";
 dataOPPoints=[];	
 dataOPPoints1=[];
-
+ */
+ location.reload();
 //document.getElementById('0.3fr').style.display = "none";
 
 
@@ -41,6 +42,9 @@ var Rt1;
 var Rt2;
             document.getElementById('tfbody').style.display = "block";
 			document.getElementById('tfbody2').style.display = "block";
+			document.getElementById('pdf').style.visibility = "visible";
+			document.getElementById('dtf').style.visibility = "visible";
+			document.getElementById('dButton').style.visibility = "visible";
 	       
 			
             var b0 = document.getElementById('b_0').value;			
@@ -83,8 +87,8 @@ var Rt2;
 			var e0=math.subtract(b1,math.multiply(a1,math.divide(b0,a0)));
 			var e1=math.subtract(b2,math.multiply(a2,math.divide(b0,a0)));
 			
-			var A1=math.divide(math.add(math.multiply(e0,R1),-e1),math.subtract(R1,R2));
-			var A2=math.divide(math.add(math.multiply(e0,R2),-e1),math.subtract(R2,R1));
+			var A1=math.divide(math.add(math.multiply(e0,R1),e1),math.subtract(R1,R2));
+			var A2=math.divide(math.add(math.multiply(e0,R2),e1),math.subtract(R2,R1));
 			
 			console.log(e0);
 			console.log(e1);
@@ -125,6 +129,7 @@ var Rt2;
 			
 			//document.getElementById("output_text2_1").innerHTML=outputText2_1;
 			//document.getElementById("output_text3").innerHTML=outputText3;
+			
 			}
 
 ////////////////////
@@ -154,8 +159,8 @@ function IIM(){
 			
 			var e0=math.subtract(b1,math.multiply(a1,math.divide(b0,a0)));
 			var e1=math.subtract(b2,math.multiply(a2,math.divide(b0,a0)));
-			var A1=math.divide(math.add(math.multiply(e0,R1),-e1),math.subtract(R1,R2));
-			var A2=math.divide(math.add(math.multiply(e0,R2),-e1),math.subtract(R2,R1));
+			var A1=math.divide(math.add(math.multiply(e0,R1),e1),math.subtract(R1,R2));
+			var A2=math.divide(math.add(math.multiply(e0,R2),e1),math.subtract(R2,R1));
 	
 	var TA1=math.divide(math.round(math.multiply(math.multiply(T,A1),100)),100);
 	var TA2=math.divide(math.round(math.multiply(math.multiply(T,A2),100)),100);
@@ -163,10 +168,15 @@ function IIM(){
 	var eTp2=math.divide(math.round(math.multiply(math.exp(math.multiply(T,R2)),100)),100);
 	var c1=math.divide(math.round(math.multiply(math.add(eTp1,eTp2),100)),100);
 	var c2=math.divide(math.round(math.multiply(math.multiply(eTp1,eTp2),100)),100);
-	var d0=math.divide(math.round(math.multiply(math.add(math.multiply(T,0.5,b0),TA1,TA2),100)),100);
-	var d1=math.divide(math.round(math.multiply(math.add(-math.multiply(T,0.5,b0,math.add(eTp1,eTp2)),-math.multiply(TA1,eTp2),-math.multiply(TA2,eTp1)),100)),100);
-	var d2=math.divide(math.round(math.multiply(math.multiply(math.multiply(T,0.5,b0),eTp1,eTp2),100)),100);
+	var d0=math.divide(math.round(math.multiply(math.add(TA1,TA2),100)),100);
+	var d1=math.divide(math.round(math.multiply(math.add(math.multiply(TA1,eTp2),math.multiply(TA2,eTp1)),100)),100);
+	var d2=0;//math.divide(math.round(math.multiply(math.multiply(math.multiply(T,0.5,b0),eTp1,eTp2),100)),100);
 	
+	
+	        console.log(TA1);
+			console.log(TA2);
+			console.log(eTp1);
+			console.log(eTp2);
 	        
 			document.getElementById('tfn13').value = b0;
 	        document.getElementById('tfn14').value = TA1;	
@@ -187,7 +197,7 @@ function IIM(){
 	        document.getElementById('tfd15').value = eTp2;
 			
 			document.getElementById('tfd16').value = 1;
-	        document.getElementById('tfd17').value = c1;
+	        document.getElementById('tfd17').value = -c1;
 			document.getElementById('tfd18').value = c2;
 	        
 			
@@ -195,8 +205,8 @@ function IIM(){
 			outputText4=" b<sub>0</sub>="+b0+";  TA<sub>1</sub>="+TA1+"; TA<sub>2</sub>="+TA2+ "; e<sup>Tp<sub>1</sub></sup>="+eTp1+";  e<sup>Tp<sub>2</sub></sup>="+eTp2+"";
 			outputText4_1=" d<sub>0</sub>="+d0+"; d<sub>1</sub>="+d1+ "; d<sub>2</sub>="+d2+"; c<sub>1</sub>="+c1+";  c<sub>2</sub>="+c2+"";
 			
-			document.getElementById("output_text4").innerHTML=outputText4;
-			document.getElementById("output_text4_1").innerHTML=outputText4_1;
+			/* document.getElementById("output_text4").innerHTML=outputText4;
+			document.getElementById("output_text4_1").innerHTML=outputText4_1; */
 }
 
 
@@ -239,8 +249,8 @@ function BTM(){
 	        outputText4=" d<sub>0</sub>="+d0+"; d<sub>1</sub>="+d1+ "; d<sub>2</sub>="+d2+";";
 			outputText4_1=" c<sub>1</sub>="+c1+";  c<sub>2</sub>="+c2+"";
 			
-			document.getElementById("output_text4").innerHTML=outputText4;
-			document.getElementById("output_text4_1").innerHTML=outputText4_1;
+			//document.getElementById("output_text4").innerHTML=outputText4;
+			//document.getElementById("output_text4_1").innerHTML=outputText4_1;
 }
 
 
