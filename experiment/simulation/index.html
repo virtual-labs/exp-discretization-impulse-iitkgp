@@ -91,7 +91,9 @@
   }
 }
 
-
+	
+	
+	
   </style>
   
   
@@ -124,10 +126,11 @@
             </div><!--3rd col under 2nd row end-->
         </div><!--2nd row under 1st container end-->
         <hr>
-        
+       
     </div><!--First Container under body tag end-->
     
-        <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
+    	
+    <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
       <div class="row"><!--First row under 3rd container start-->
         <div class="col-md-1"></div><!--First col under 3rd container start& end-->
         <div class="col-md-10"><!--2nd col under 3rd container start-->
@@ -183,7 +186,7 @@
 			<div id="tfbody" class="card" style="display:none; width:100%;background-color:none">
 			<br/>			
 			<span class="card-text "><b>Transfer Function of Continuous System</b></span><br/><br/><br/>			
-			<span class="card-text " ><b style="position:absolute;width: 6%;left:27%;top: 61%;">G (s) =</b></span> 
+			<span class="card-text" ><b style="position:absolute;width: 6%;left:27%;top: 61%;">G (s) =</b></span> 
 			<span  class="card-text fontCss" >&nbsp;&nbsp;<input type="number" id="tfn1" value="0" readonly=readonly style="width:5%;text-align:center;border:none">&nbsp;<b>s<sup>2</sup></b>
 			+ &nbsp;<input type="number" id="tfn2" value="0" readonly=readonly style="width:5%;text-align:center;border:none">&nbsp;<b>s</b> 
 			+ &nbsp; <input type="number" id="tfn3" value="0" readonly=readonly style="width:5%;text-align:center;border:none"></span><br/>
@@ -236,8 +239,8 @@
 			
 			
 			
-			<div   class="img-container">			
-			<b>Partial Fractions form of given system, G(s):</b></br>
+			<div   class="img-container">				
+			<b style="visibility:hidden" id="pdf">Partial Fractions form of given system, G(s):</b></br>
 			<!--<img class = "img-fluid" src="./images/pf.png" class="img-fluid" > <br/></br> -->
 			
 			<div id="tfbody2" class="card" style="display:none;width:100%;min-width:1000px;background-color:none">
@@ -258,7 +261,7 @@
 			
 			<span style="position:absolute;left:24%;top: 70%;">=<input type="number" id="tfn7" value="0" readonly=readonly style="width:20%;text-align:center;border:none;"> + </span>
 			
-			<span style="position:absolute;left:29%;top: 62%;"><input type="number" id="tfn8" value="0" readonly=readonly style="width:20%;text-align:center;border:none;"><b> s</b> + 
+			<span style="position:absolute;left:29%;top: 62%;"><input type="number" id="tfn8" value="0" readonly=readonly style="width:20%;text-align:center;border:none;"> s + 
 			<input type="number" id="tfn9" value="0" readonly=readonly style="width:20%;text-align:center;border:none;"></span>
 			<span  class="card-text fontCss" style="position:absolute;left:15%;top: 78%;">&nbsp;&nbsp;<input type="number" id="tfd7" value="0" readonly=readonly style="width:5%;text-align:center;border:none">&nbsp;<b>s<sup>2</sup></b>
 			+ &nbsp;<input type="number" id="tfd8" value="0" readonly=readonly style="width:5%;text-align:center;border:none">&nbsp;<b>s</b> 
@@ -270,12 +273,12 @@
 			<span style="position:absolute;left:51%;top: 70%;">= <input type="number" id="tfn10" value="0" readonly=readonly style="width:20%;text-align:center;border:none;"> + </span>
 			
 			<span style="position:absolute;left:60%;top: 62%;"><input type="number" id="tfn11" value="0" readonly=readonly style="width:20%;text-align:center;border:none;"></span>
-			<span style="position:absolute;left:59%;top: 77%;"><b>s</b> + (<input type="number" id="tfd10" value="0" readonly=readonly style="width:20%;text-align:center;border:none;">)</span>
+			<span style="position:absolute;left:59%;top: 77%;">s + (<input type="number" id="tfd10" value="0" readonly=readonly style="width:20%;text-align:center;border:none;">)</span>
 			<hr  style="position:absolute;width: 8%;left:66%;top:69%;">
 			
 			<span style="position:absolute;left:74%;top: 70%;">+</span>
 			<span style="position:absolute;left:71%;top: 62%;"><input type="number" id="tfn12" value="0" readonly=readonly style="width:20%;text-align:center;border:none;"></span>
-			<span style="position:absolute;left:70%;top: 77%;"><b>s</b> + (<input type="number" id="tfd11" value="0" readonly=readonly style="width:20%;text-align:center;border:none;">)</span>
+			<span style="position:absolute;left:70%;top: 77%;">s + (<input type="number" id="tfd11" value="0" readonly=readonly style="width:20%;text-align:center;border:none;">)</span>
 			<hr  style="position:absolute;width: 8%;left:77%;top: 70%;">
 									
 			<br/><br/>
@@ -312,7 +315,7 @@
 	<div class="col-md-1"></div>
 	</div>-->
 				
-	 <div class="d-inline-flex p-3 gy-2">			
+	 <div class="d-inline-flex p-3 gy-2" style="visibility:hidden" id="dButton">			
 		<div class="dropdown">
   <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Discretization
@@ -330,8 +333,8 @@
 		
 	</div>
 	</br>
-	<div   class="img-container">			
-			<b>Discretized form of the given system, G(z):</b></br>
+	<div   class="img-container">				
+			<b style="visibility:hidden" id="dtf">Discretized form of the given system, G(z):</b></br>
 			<!--<img class = "img-fluid" src="./images/DF_IIM.png" class="img-fluid" > <br/></br> -->
 			
 			<div id="tfbody3" class="card" style="display:none;width:100%;min-width:1000px;background-color:none">
@@ -364,14 +367,14 @@
 			+</span> 
 			
 			<span class="card-text"style="position:absolute;left:41%;top: 62%;" >
-			&nbsp;<input type="number" id="tfn17" value="0" readonly=readonly style="width:25%;text-align:center;border:none"><span class="fontCss">z</span></span>
+			&nbsp;<input type="number" id="tfn17" value="0" readonly=readonly style="width:25%;text-align:center;border:none">&nbsp;<span class="fontCss">z</span></span>
 			<span class="card-text"style="position:absolute;left:41%;top:78%;" >
 			<span class="fontCss">z -</span><input type="number" id="tfd14" value="0" readonly=readonly style="width:25%;text-align:center;border:none"></span>
 			<hr  style="position:absolute;width: 9%;left:46%;top: 70%;">
 			
 			<span class="card-text"style="position:absolute;left:55%;top:71%;" >+&nbsp;</span>
 			<span class="card-text"style="position:absolute;left:53%;top: 62%;" >
-			&nbsp;<input type="number" id="tfn18" value="0" readonly=readonly style="width:25%;text-align:center;border:none"><span class="fontCss">z</span></span>
+			&nbsp;<input type="number" id="tfn18" value="0" readonly=readonly style="width:25%;text-align:center;border:none">&nbsp;<span class="fontCss">z</span></span>
 			<span class="card-text"style="position:absolute;left:53%;top:78%;" >
 			<span class="fontCss">z -</span><input type="number" id="tfd15" value="0" readonly=readonly style="width:25%;text-align:center;border:none"></span>
 			<hr  style="position:absolute;width: 9%;left:57%;top: 70%;">
@@ -384,7 +387,7 @@
 			
 			<span class="card-text"style="position:absolute;left:63%;top: 80%;" >
 			&nbsp;<input type="number" id="tfd16" value="0" readonly=readonly style="width:20%;text-align:center;border:none"><span class="fontCss">z<sup>2</sup></span>
-			-&nbsp;<input type="number" id="tfd17" value="0" readonly=readonly style="width:20%;text-align:center;border:none"><span class="fontCss">z</span>
+			+&nbsp;<input type="number" id="tfd17" value="0" readonly=readonly style="width:20%;text-align:center;border:none"><span class="fontCss">z</span>
 			+&nbsp;<input type="number" id="tfd18" value="0" readonly=readonly style="width:20%;text-align:center;border:none"></span>
 			<hr  style="position:absolute;width: 24%;left:69%;top: 70%;">						
 			<br/><br/>
