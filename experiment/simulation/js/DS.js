@@ -67,9 +67,97 @@ var Rt2;
 			//document.getElementById("output_text1").innerHTML=outputText1;
 			//document.getElementById("output_text2").innerHTML=outputText2;
 		    
-			var part=math.sqrt(math.subtract(math.pow(a1,2),math.multiply(4,a0,a2)));
-			var num1=math.add(-a1,part);
-			var num2=math.add(-a1,-part);
+			var part=math.subtract(math.pow(a1,2),math.multiply(4,a0,a2));
+			if (part < 0)
+			{
+			var part1=math.sqrt(part);
+			var num1=math.add(-a1,part1);
+			var den=math.multiply(2,a0);
+			R11=math.divide(num1,den);
+			
+			R1 = math.complex(math.divide(math.round(math.multiply(R11.re,1000)),1000),math.divide(math.round(math.multiply(R11.im,1000)),1000));
+			
+			console.log(R1);
+			console.log(R1.re);
+			console.log(R1.im);
+			
+			var num2=math.add(-a1,-part1);
+			
+			R2=math.complex(R1.re,-R1.im);
+			
+			console.log(R2);
+			Rt1="Pole-1 = " +R1+ "";
+			Rt2="Pole-2 = " +R2+ "";
+			
+			document.getElementById("Rt_text1").innerHTML=Rt1;
+			document.getElementById("Rt_text2").innerHTML=Rt2;
+				
+			var e0=math.subtract(b1,math.multiply(a1,math.divide(b0,a0)));
+			var e1=math.subtract(b2,math.multiply(a2,math.divide(b0,a0)));
+			
+			
+			////////
+			var A1= math.divide(math.round(math.multiply(math.divide(math.add(math.multiply(e0,R1),e1),math.subtract(R1,R2)),1000)),1000);
+			var A2= math.divide(math.round(math.multiply(math.divide(math.add(math.multiply(e0,R2),e1),math.subtract(R2,R1)),1000)),1000);
+			
+			console.log(e0);
+			console.log(e1);
+			console.log(A1);
+			console.log(A2);
+			
+			document.getElementById('tfn4').value = b0;
+	        document.getElementById('tfn5').value = b1;
+	        document.getElementById('tfn6').value = b2;
+			
+			document.getElementById('tfd4').value = a0;
+	        document.getElementById('tfd5').value = a1;
+	        document.getElementById('tfd6').value = a2;
+			
+			document.getElementById('tfn7').value = b0;
+	        document.getElementById('tfn8').value = e0;
+	        document.getElementById('tfn9').value = e1;
+			
+	        document.getElementById('tfd7').value = a0;
+	        document.getElementById('tfd8').value = a1;
+	        document.getElementById('tfd9').value = a2;
+			
+			document.getElementById('tfn10').value = b0;
+	        document.getElementById('tfn11').value = A1;
+			//document.getElementById('tfn11').value = A1.re;
+			//document.getElementById('tfn11_1').value = A1.im;
+	        document.getElementById('tfn12').value = A2;
+			//document.getElementById('tfn12').value = A2.re;
+			//document.getElementById('tfn12_1').value = A2.im;
+			
+			
+	        //document.getElementById('tfd10').value = -R1;
+			R11=math.complex(-R1.re,-R1.im);
+	        document.getElementById('tfd10').value = R11;
+			//document.getElementById('tfd10').value = -R1.re;
+			//document.getElementById('tfd10_1').value = -R1.im;
+			R22=math.complex(-R2.re,-R2.im);
+	        document.getElementById('tfd11').value = R22;
+			//document.getElementById('tfd11').value = -R2.re;
+			//document.getElementById('tfd11_1').value = -R2.im;
+			
+			
+	
+	        
+			
+			//document.getElementById('my-div').innerHTML = '<img src="./images/pf.png">';
+			
+			outputText2_1=" b<sub>0</sub>="+b0+";  b<sub>1</sub>="+b1+"; b<sub>2</sub>="+b2+ "; a<sub>0</sub>="+a0+";  a<sub>1</sub>="+a1+";  a<sub>2</sub>="+a2+ "";
+			outputText3=" p<sub>1</sub>="+-R1+"; p<sub>2</sub>="+-R2+ " b<sub>0</sub>="+b0+"; e<sub>0</sub>="+e0+";  e<sub>1</sub>="+e1+";  A<sub>1</sub>="+A1+ "; A<sub>2</sub>="+A2+"";
+			///////
+				
+				
+			}
+			
+			else {
+			
+			var part1=math.sqrt(part);
+			var num1=math.add(-a1,part1);
+			var num2=math.add(-a1,-part1);
 			var den=math.multiply(2,a0);
 			R1=math.divide(num1,den);
 			R2=math.divide(num2,den);
@@ -113,11 +201,17 @@ var Rt2;
 			
 			document.getElementById('tfn10').value = b0;
 	        document.getElementById('tfn11').value = A1;
+			//document.getElementById('tfn11_1').value = 0;
 	        document.getElementById('tfn12').value = A2;
+			//document.getElementById('tfn12_1').value = 0;
 			
 			
 	        document.getElementById('tfd10').value = -R1;
+			//document.getElementById('tfd10_1').value = 0;
 	        document.getElementById('tfd11').value = -R2;
+			//document.getElementById('tfd11_1').value = 0;
+			
+			
 	        
 	
 	        
@@ -129,7 +223,7 @@ var Rt2;
 			
 			//document.getElementById("output_text2_1").innerHTML=outputText2_1;
 			//document.getElementById("output_text3").innerHTML=outputText3;
-			
+			}
 			}
 
 ////////////////////
@@ -150,9 +244,83 @@ function IIM(){
 	        var T = document.getElementById('Ts').value;
 			
            	
-	        var part=math.sqrt(math.subtract(math.pow(a1,2),math.multiply(4,a0,a2)));
-			var num1=math.add(-a1,part);
-			var num2=math.add(-a1,-part);
+	        var part=math.subtract(math.pow(a1,2),math.multiply(4,a0,a2));
+			
+			if (part < 0)
+			{
+			var part1=math.sqrt(part);
+			var num1=math.add(-a1,part1);
+			var den=math.multiply(2,a0);
+			R11=math.divide(num1,den);
+			
+			R1 = math.complex(math.divide(math.round(math.multiply(R11.re,1000)),1000),math.divide(math.round(math.multiply(R11.im,1000)),1000));
+			
+			console.log(R1);
+			console.log(R1.re);
+			console.log(R1.im);
+			
+			var num2=math.add(-a1,-part1);
+			
+			R2=math.complex(R1.re,-R1.im);
+			
+			console.log(R2);
+			
+			var e0=math.subtract(b1,math.multiply(a1,math.divide(b0,a0)));
+			var e1=math.subtract(b2,math.multiply(a2,math.divide(b0,a0)));
+			var A1=math.divide(math.add(math.multiply(e0,R1),e1),math.subtract(R1,R2));
+			var A2=math.divide(math.add(math.multiply(e0,R2),e1),math.subtract(R2,R1));
+	
+	var TA1=math.divide(math.round(math.multiply(math.multiply(T,A1),1000)),1000);
+	var TA2=math.divide(math.round(math.multiply(math.multiply(T,A2),1000)),1000);
+	var eTp1=math.divide(math.round(math.multiply(math.exp(math.multiply(T,R1)),1000)),1000);
+	var eTp2=math.divide(math.round(math.multiply(math.exp(math.multiply(T,R2)),1000)),1000);
+	var c1=math.divide(math.round(math.multiply(math.add(eTp1,eTp2),1000)),1000);
+	var c2=math.divide(math.round(math.multiply(math.multiply(eTp1,eTp2),1000)),1000);
+	var d0=math.divide(math.round(math.multiply(math.add(TA1,TA2),1000)),1000);
+	var d1=math.divide(math.round(math.multiply(math.add(math.multiply(TA1,eTp2),math.multiply(TA2,eTp1)),1000)),1000);
+	var d2=0;//math.divide(math.round(math.multiply(math.multiply(math.multiply(T,0.5,b0),eTp1,eTp2),100)),100);
+	
+	
+	        console.log(TA1);
+			console.log(TA2);
+			console.log(eTp1);
+			console.log(eTp2);
+	        
+			/* document.getElementById('tfn13').value = b0;
+	        document.getElementById('tfn14').value = TA1;	
+	        document.getElementById('tfn15').value = TA2;
+			
+	        document.getElementById('tfn16').value = b0;
+			document.getElementById('tfn17').value = TA1;
+			document.getElementById('tfn18').value = TA2;
+			 */
+			document.getElementById('tfn19').value = d0;
+			document.getElementById('tfn20').value = -d1;
+			document.getElementById('tfn21').value = d2;
+			
+			/* document.getElementById('tfd12').value = eTp1;
+	        document.getElementById('tfd13').value = eTp2;
+			
+			document.getElementById('tfd14').value = eTp1;
+	        document.getElementById('tfd15').value = eTp2; */
+			
+			document.getElementById('tfd16').value = 1;
+	        document.getElementById('tfd17').value = -c1;
+			document.getElementById('tfd18').value = c2;
+	        
+			
+			
+			outputText4=" b<sub>0</sub>="+b0+";  TA<sub>1</sub>="+TA1+"; TA<sub>2</sub>="+TA2+ "; e<sup>Tp<sub>1</sub></sup>="+eTp1+";  e<sup>Tp<sub>2</sub></sup>="+eTp2+"";
+			outputText4_1=" d<sub>0</sub>="+d0+"; d<sub>1</sub>="+d1+ "; d<sub>2</sub>="+d2+"; c<sub>1</sub>="+c1+";  c<sub>2</sub>="+c2+"";
+			
+				
+			}
+			
+			else {
+			
+			var part1=math.sqrt(part);
+			var num1=math.add(-a1,part1);
+			var num2=math.add(-a1,-part1);
 			var den=math.multiply(2,a0);
 			R1=math.divide(num1,den);
 			R2=math.divide(num2,den);
@@ -162,14 +330,14 @@ function IIM(){
 			var A1=math.divide(math.add(math.multiply(e0,R1),e1),math.subtract(R1,R2));
 			var A2=math.divide(math.add(math.multiply(e0,R2),e1),math.subtract(R2,R1));
 	
-	var TA1=math.divide(math.round(math.multiply(math.multiply(T,A1),100)),100);
-	var TA2=math.divide(math.round(math.multiply(math.multiply(T,A2),100)),100);
-	var eTp1=math.divide(math.round(math.multiply(math.exp(math.multiply(T,R1)),100)),100);
-	var eTp2=math.divide(math.round(math.multiply(math.exp(math.multiply(T,R2)),100)),100);
-	var c1=math.divide(math.round(math.multiply(math.add(eTp1,eTp2),100)),100);
-	var c2=math.divide(math.round(math.multiply(math.multiply(eTp1,eTp2),100)),100);
-	var d0=math.divide(math.round(math.multiply(math.add(TA1,TA2),100)),100);
-	var d1=math.divide(math.round(math.multiply(math.add(math.multiply(TA1,eTp2),math.multiply(TA2,eTp1)),100)),100);
+	var TA1=math.divide(math.round(math.multiply(math.multiply(T,A1),1000)),1000);
+	var TA2=math.divide(math.round(math.multiply(math.multiply(T,A2),1000)),1000);
+	var eTp1=math.divide(math.round(math.multiply(math.exp(math.multiply(T,R1)),1000)),1000);
+	var eTp2=math.divide(math.round(math.multiply(math.exp(math.multiply(T,R2)),1000)),1000);
+	var c1=math.divide(math.round(math.multiply(math.add(eTp1,eTp2),1000)),1000);
+	var c2=math.divide(math.round(math.multiply(math.multiply(eTp1,eTp2),1000)),1000);
+	var d0=math.divide(math.round(math.multiply(math.add(TA1,TA2),1000)),1000);
+	var d1=math.divide(math.round(math.multiply(math.add(math.multiply(TA1,eTp2),math.multiply(TA2,eTp1)),1000)),1000);
 	var d2=0;//math.divide(math.round(math.multiply(math.multiply(math.multiply(T,0.5,b0),eTp1,eTp2),100)),100);
 	
 	
@@ -178,23 +346,23 @@ function IIM(){
 			console.log(eTp1);
 			console.log(eTp2);
 	        
-			document.getElementById('tfn13').value = b0;
+			/* document.getElementById('tfn13').value = b0;
 	        document.getElementById('tfn14').value = TA1;	
 	        document.getElementById('tfn15').value = TA2;
 			
 	        document.getElementById('tfn16').value = b0;
 			document.getElementById('tfn17').value = TA1;
-			document.getElementById('tfn18').value = TA2;
+			document.getElementById('tfn18').value = TA2; */
 			
 			document.getElementById('tfn19').value = d0;
-			document.getElementById('tfn20').value = d1;
+			document.getElementById('tfn20').value = -d1;
 			document.getElementById('tfn21').value = d2;
 			
-			document.getElementById('tfd12').value = eTp1;
+			/* document.getElementById('tfd12').value = eTp1;
 	        document.getElementById('tfd13').value = eTp2;
 			
 			document.getElementById('tfd14').value = eTp1;
-	        document.getElementById('tfd15').value = eTp2;
+	        document.getElementById('tfd15').value = eTp2; */
 			
 			document.getElementById('tfd16').value = 1;
 	        document.getElementById('tfd17').value = -c1;
@@ -207,6 +375,7 @@ function IIM(){
 			
 			/* document.getElementById("output_text4").innerHTML=outputText4;
 			document.getElementById("output_text4_1").innerHTML=outputText4_1; */
+			}
 }
 
 
@@ -230,12 +399,12 @@ function BTM(){
 			var a0k2=math.multiply(a0,math.pow(k,2));
 			var a1k=math.multiply(a1,k);
 			
-			var d0=math.divide(math.round(math.multiply(math.divide(math.add(b0k2,b1k,b2),math.add(a0k2,a1k,a2)),100)),100);
-			var d1=math.divide(math.round(math.multiply(math.divide(math.subtract(2*b2,2*b0k2),math.add(a0k2,a1k,a2)),100)),100);
-			var d2=math.divide(math.round(math.multiply(math.divide(math.add(b0k2,-b1k,b2),math.add(a0k2,a1k,a2)),100)),100);
+			var d0=math.divide(math.round(math.multiply(math.divide(math.add(b0k2,b1k,b2),math.add(a0k2,a1k,a2)),1000)),1000);
+			var d1=math.divide(math.round(math.multiply(math.divide(math.subtract(2*b2,2*b0k2),math.add(a0k2,a1k,a2)),1000)),1000);
+			var d2=math.divide(math.round(math.multiply(math.divide(math.add(b0k2,-b1k,b2),math.add(a0k2,a1k,a2)),1000)),1000);
 			
-			var c1=math.divide(math.round(math.multiply(math.divide(math.subtract(2*a2,2*a0k2),math.add(a0k2,a1k,a2)),100)),100);
-			var c2=math.divide(math.round(math.multiply(math.divide(math.add(a0k2,-a1k,a2),math.add(a0k2,a1k,a2)),100)),100);
+			var c1=math.divide(math.round(math.multiply(math.divide(math.subtract(2*a2,2*a0k2),math.add(a0k2,a1k,a2)),1000)),1000);
+			var c2=math.divide(math.round(math.multiply(math.divide(math.add(a0k2,-a1k,a2),math.add(a0k2,a1k,a2)),1000)),1000);
 			
 			document.getElementById('tfn22').value = d0;
 	        document.getElementById('tfn23').value = d1;	
