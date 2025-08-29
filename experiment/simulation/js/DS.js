@@ -62,8 +62,8 @@ var Rt2;
 	        document.getElementById('tfd2').value = a1;
 	        document.getElementById('tfd3').value = a2;
 			
-			outputText1=" G(s)= ["+b0+"s\u00B2+("+b1+")s+("+b2+ ")] / [" +a0+"s<sup>2</sup>+("+a1+")s+("+a2+ ")]";//+b0+"s\u00B2+"+b1+"s+"+b2+;
-	        outputText2=" b<sub>0</sub>="+b0+";  b<sub>1</sub>="+b1+"; b<sub>2</sub>="+b2+ "; a<sub>0</sub>="+a0+";  a<sub>1</sub>="+a1+";  a<sub>2</sub>="+a2+ "";
+			outputText1=" <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>G</span>(<span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>s</span>)= ["+b0+"<span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>s</span>\u00B2+("+b1+")<span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>s</span>+("+b2+ ")] / [" +a0+"<span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>s</span><sup>2</sup>+("+a1+")<span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>s</span>+("+a2+ ")]";//+b0+"s\u00B2+"+b1+"s+"+b2+;
+	        outputText2=" <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>b<sub>0</sub></span>="+b0+";  <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>b<sub>1</sub></span>="+b1+"; <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>b<sub>2</sub></span>="+b2+ "; <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>a<sub>0</sub></span>="+a0+";  <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>a<sub>1</sub></span>="+a1+";  <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>a<sub>2</sub></span>="+a2+ "";
 			//document.getElementById("output_text1").innerHTML=outputText1;
 			//document.getElementById("output_text2").innerHTML=outputText2;
 		    
@@ -146,7 +146,7 @@ var Rt2;
 			
 			//document.getElementById('my-div').innerHTML = '<img src="./images/pf.png">';
 			
-			outputText2_1=" b<sub>0</sub>="+b0+";  b<sub>1</sub>="+b1+"; b<sub>2</sub>="+b2+ "; a<sub>0</sub>="+a0+";  a<sub>1</sub>="+a1+";  a<sub>2</sub>="+a2+ "";
+			outputText2_1=" <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>b<sub>0</sub></span>="+b0+";  <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>b<sub>1</sub></span>="+b1+"; <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>b<sub>2</sub></span>="+b2+ "; <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>a<sub>0</sub></span>="+a0+";  <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>a<sub>1</sub></span>="+a1+";  <span style='font-family:Bodoni MT; font-style:italic;font-size:18px'>a<sub>2</sub></span>="+a2+ "";
 			outputText3=" p<sub>1</sub>="+-R1+"; p<sub>2</sub>="+-R2+ " b<sub>0</sub>="+b0+"; e<sub>0</sub>="+e0+";  e<sub>1</sub>="+e1+";  A<sub>1</sub>="+A1+ "; A<sub>2</sub>="+A2+"";
 			///////
 				
