@@ -7,7 +7,7 @@
 <b>Discipline | <b>Electrical Engineering 
 :--|:--|
 <b> Lab | <b> Digital Control Laboratory
-<b> Experiment|     <b> Discretization of continuous system and Exp 3
+<b> Experiment|     <b> Discretization of Continuous System  and Exp 3
 
 ### About the Experiment 
 
