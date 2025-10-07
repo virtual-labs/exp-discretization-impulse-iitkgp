@@ -20,7 +20,9 @@ Some methods tend to provide a better frequency-domain match between the origina
 5. Pole-Zero Mapping </br>
 The application of z-transform gives an extremely useful mathematical description of a linear time invariant discrete time system.					
 The transfer function of a linear time invariant discrete time system is, by defination, the z-transform of the impulse response of the system.
+
 $$ G(z) = \frac{Z[y(k)]}{Z[r(k)]}  = \frac {Y(z)}{R(z)}	$$
+
 when system is initially relaxed. </br>
 Thus, the transfer function of a linear time invariant discrete time sytem is the ratio of the z-transforms of its output and input sequences, 
 assuming that the system is initially relaxed. 
