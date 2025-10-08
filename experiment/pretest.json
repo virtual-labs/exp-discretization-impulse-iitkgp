@@ -35,7 +35,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Q4. Which of the following is not a standard discretization method used in control systems?",
+      "question": "Q4. Which of the following is not the standard discretization method used in control systems?",
       "answers": {
         "a": "Zero order Hold method",
         "b": "First order Hold method",
