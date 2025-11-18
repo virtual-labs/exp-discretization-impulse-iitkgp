@@ -4,20 +4,21 @@
 										
 <ol type="1">
 
-<li> At first enter the coefficient values of the transfer function and sampling time <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">T</span>. </li></br>
+<li> Click the appropriate button for the system type: 'First Order' or 'Second Order'. </li></br>
 <div align="center">
-<img class="img-fluid"  src="./images/Prod_1.png" alt=""><br> 
-<b>Fig. 1. Coefficient values entry for continuous transfer function</b><br/>						  
+<img class="img-fluid"  src="./images/FO_SO.png" alt=""><br> 
+<b>Fig. 1. Buttons to select the type of the system</b><br/>						  
 </div><br/>
 
-<li> Click on '<span style="font-family:Bodoni MT; font-style:italic;font-size:18px">G</span>(<span style="font-family:Bodoni MT; font-style:italic;font-size:18px">s</span>)' button to get the partial fraction form of the given transfer function.</li></br>
+<li> At first enter the coefficient values of the transfer function and sampling time <span style="font-family:'Bodoni MT';font-style:italic;font-size:18px">T</span>. </li></br>
+
+
+<li> Click on '<span style="font-family:Bodoni MT; font-style:italic;font-size:18px">G</span>(<span style="font-family:Bodoni MT; font-style:italic;font-size:18px">s</span>)' button to get the given transfer function.</li></br>
 <div align="center">
-<img class="img-fluid"  src="./images/Prod_2.png" alt=""><br>           
+<img class="img-fluid"  src="./images/Prod_2.png" alt=""><br>  
+<b>Fig. 2. Button to get the given transfer function</b><br/>		
 </div><br/>
-<div align="center">
-<img class="img-fluid"  src="./images/Prod_2_1.png" alt=""><br> 
-<b>Fig. 2. Partial fraction form of continuous transfer function</b><br/>							  
-</div><br/>
+
 
 <li> Clicking on 'Discretization' dropdown-menu for different methods.  </li><br/>
 <div align="center">
@@ -28,7 +29,7 @@
 <li> Click on the desired option to get the discrete form of the system.</li><br/>
 <div align="center">
 <img class="img-fluid"  src="./images/Prod_4.png" alt=""><br> 
-<b>Fig. 4. Desired option toget the disctre form </b><br/>						  
+<b>Fig. 4. Desired option to get the discrete form </b><br/>						  
 </div><br/>
 
 
