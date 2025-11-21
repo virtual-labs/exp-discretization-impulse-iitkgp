@@ -72,7 +72,6 @@
   
 </head>
 
- 
 <body><!--body tag start-->
     <div class="container p-3 my-3 text-primary text-center border"><!--First Container under body tag start-->
         <div class="row"><!--First row under 1st container start-->
@@ -102,6 +101,7 @@
         <hr>
         
     </div><!--First Container under body tag end-->
+    
     
 	
     <div class="container p-3 my-5 text-left border"><!--3rd Container under body tag start-->
@@ -376,7 +376,7 @@
 			
 			<div id="tfbody3_FO" class="card" style="display:none;width:100%;min-width:1000px;background-color:none">
 			<!-- 1st order IIM -->
-			<span class="card-text "><b>Impulse Invariance Method</b></span>
+			<span class="card-text "><b>Transfer Function by Impulse Invariance Method</b></span>
 			
 			
 				$$G (z) = \frac{d_0 z + d_1 }{z + c_1 }$$
@@ -396,7 +396,10 @@
 			&nbsp;<input type="number" id="tfd16" value="0" readonly=readonly style="width:20%;text-align:center;border:none"><b><span style="font-family:Bodoni MT; font-style:italic;font-size:18px">z</span></b>
 			+&nbsp;<input type="number" id="tfd17" value="0" readonly=readonly style="width:20%;text-align:center;border:none">
 			</span>
-			<hr  style="position:absolute;width: 16%;left:40%;top: 70%;">				
+			<hr  style="position:absolute;width: 16%;left:40%;top: 70%;">
+             <span class="card-text"style="position:absolute;left:50%;top: 70%;" >
+             ; &nbsp; <span style="font-family:Bodoni MT; font-style:italic;font-size:18px">T</span> = <input type="number" id="tfd18" value="0" readonly=readonly style="width:20%;text-align:center;border:none">
+			</span>			 
 			<br/><br/>
 			
 			</div>
@@ -404,7 +407,7 @@
 			<div id="tfbody3" class="card" style="display:none;width:100%;min-width:1000px;background-color:none">
 			<br/>	
 			
-			<span class="card-text "><b>Impulse Invariance Method</b></span>
+			<span class="card-text "><b>Transfer Function by Impulse Invariance Method</b></span>
 			
 			<!-- $$G (z) = b_0 + \frac{TA_1}{1 - z^{-1} e^{T p_1}} + \frac{TA_2}{1 - z^{-1} e^{T p_2}} = b_0 + \frac{TA_1 z}{z - e^{T p_1}} + \frac{TA_2 z}{z - e^{T p_2}} = \frac{d_0 z^2 + d_1 z + d_2}{z^2 + c_1 z + c_2}$$ -->
 				$$G (z) = \frac{d_0 z^2 + d_1 z + d_2}{z^2 + c_1 z + c_2}$$
@@ -424,13 +427,17 @@
 			&nbsp;<input type="number" id="tfd16SO" value="0" readonly=readonly style="width:20%;text-align:center;border:none"><b><span style="font-family:Bodoni MT; font-style:italic;font-size:18px">z<sup>2</sup></span></b>
 			+&nbsp;<input type="number" id="tfd17SO" value="0" readonly=readonly style="width:20%;text-align:center;border:none"><b><span style="font-family:Bodoni MT; font-style:italic;font-size:18px">z</span></b>
 			+&nbsp;<input type="number" id="tfd18SO" value="0" readonly=readonly style="width:20%;text-align:center;border:none"></span>
+			
+			<span class="card-text"style="position:absolute;left:70%;top: 70%;" > ;&nbsp; <span style="font-family:Bodoni MT; font-style:italic;font-size:18px">T</span> = <input type="number" id="tfT1" value="0" readonly=readonly style="width:20%;text-align:center;border:none">
+			</span>
+			
 			<hr  style="position:absolute;width: 36%;left:40%;top: 70%;">				
 			<br/><br/>
 			</div>
 			
 			<div id="tfbody4_FO" class="card" style="display:none;width:100%;min-width:1000px;background-color:none">
 			<!-- 1st order BTM -->	
-			<span class="card-text "><b>Bilinear Transformation Method</b></span>
+			<span class="card-text "><b>Transfer Function by Bilinear Transformation Method</b></span>
 			$$G (z) = \frac{d_0 z + d_1}{z + c_1}$$
 			<br/>
 		
@@ -447,6 +454,9 @@
 			&nbsp;<input type="number" id="tfd19" value="0" readonly=readonly style="width:20%;text-align:center;border:none"><b><span style="font-family:Bodoni MT; font-style:italic;font-size:18px">z</span></b>
 			+&nbsp;<input type="number" id="tfd20" value="0" readonly=readonly style="width:20%;text-align:center;border:none"> </span>
 			
+			 <span class="card-text"style="position:absolute;left:50%;top: 70%;" > ;&nbsp; <span style="font-family:Bodoni MT; font-style:italic;font-size:18px">T</span> = <input type="number" id="tfd21" value="0" readonly=readonly style="width:20%;text-align:center;border:none">
+			</span>
+			
 			<hr  style="position:absolute;width: 16%;left:40%;top: 70%;">						
 			<br/><br/>
 			
@@ -454,7 +464,7 @@
 			
 			<div id="tfbody4" class="card" style="display:none;width:100%;min-width:1000px;background-color:none">
 			<br/>	
-			<span class="card-text "><b>Bilinear Transformation Method</b></span>
+			<span class="card-text "><b>Transfer Function by Bilinear Transformation Method</b></span>
 			$$G (z) = \frac{d_0 z^2 + d_1 z + d_2}{z^2 + c_1 z + c_2}$$
 			<br/>
 		
@@ -471,6 +481,10 @@
 			&nbsp;<input type="number" id="tfd19SO" value="0" readonly=readonly style="width:20%;text-align:center;border:none"><b><span style="font-family:Bodoni MT; font-style:italic;font-size:18px">z<sup>2</sup></span></b>
 			+&nbsp;<input type="number" id="tfd20SO" value="0" readonly=readonly style="width:20%;text-align:center;border:none"><b><span style="font-family:Bodoni MT; font-style:italic;font-size:18px">z</span></b>
 			+&nbsp;<input type="number" id="tfd21SO" value="0" readonly=readonly style="width:20%;text-align:center;border:none"></span>
+			
+			<span class="card-text"style="position:absolute;left:70%;top: 70%;" > ;&nbsp; <span style="font-family:Bodoni MT; font-style:italic;font-size:18px">T</span> = <input type="number" id="tfT2" value="0" readonly=readonly style="width:20%;text-align:center;border:none">
+			</span>
+			
 			<hr  style="position:absolute;width: 36%;left:40%;top: 70%;">						
 			<br/><br/>
 			</div>

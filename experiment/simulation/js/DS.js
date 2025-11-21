@@ -506,7 +506,8 @@ function IIM_FO(){
 			
 			document.getElementById('tfd16').value = 1;
 	        document.getElementById('tfd17').value = c1;
-			//document.getElementById('tfd18').value = c2;
+			
+			document.getElementById('tfd18').value = T;
 	        
 			
 			
@@ -604,7 +605,7 @@ function IIM(){
 	        document.getElementById('tfd17SO').value = -c1;
 			document.getElementById('tfd18SO').value = c2;
 	        
-			
+			document.getElementById('tfT1').value = T;
 			
 			outputText4=" b<sub>0</sub>="+b0+";  TA<sub>1</sub>="+TA1+"; TA<sub>2</sub>="+TA2+ "; e<sup>Tp<sub>1</sub></sup>="+eTp1+";  e<sup>Tp<sub>2</sub></sup>="+eTp2+"";
 			outputText4_1=" d<sub>0</sub>="+d0+"; d<sub>1</sub>="+d1+ "; d<sub>2</sub>="+d2+"; c<sub>1</sub>="+c1+";  c<sub>2</sub>="+c2+"";
@@ -683,6 +684,7 @@ function IIM(){
 	        document.getElementById('tfd17SO').value = -c1;
 			document.getElementById('tfd18SO').value = c2;  
 	        
+			document.getElementById('tfT1').value = T;
 			
 			}
 			
@@ -730,6 +732,8 @@ function IIM(){
 			document.getElementById('tfd16SO').value = 1;
 	        document.getElementById('tfd17SO').value = -c1;
 			document.getElementById('tfd18SO').value = c2;
+			
+			document.getElementById('tfT1').value = T;
 	        
 			}
 			
@@ -791,7 +795,7 @@ function BTM_FO(){
 			document.getElementById('tfd19').value = 1;
 	        document.getElementById('tfd20').value = c1;
 			
-			
+			document.getElementById('tfd21').value = T;
 	
 	        outputText4=" d<sub>0</sub>="+d0+"; d<sub>1</sub>="+d1+ "; d<sub>2</sub>="+d2+";";
 			outputText4_1=" c<sub>1</sub>="+c1+";  c<sub>2</sub>="+c2+"";
@@ -881,6 +885,8 @@ function BTM(){
 			document.getElementById('tfd19SO').value = 1;
 	        document.getElementById('tfd20SO').value = c1;
 			document.getElementById('tfd21SO').value = c2;
+			
+			document.getElementById('tfT2').value = T;
 				
 			}
 			
@@ -907,6 +913,9 @@ function BTM(){
 			document.getElementById('tfd19SO').value = 1;
 	        document.getElementById('tfd20SO').value = c1;
 			document.getElementById('tfd21SO').value = c2;
+			
+			document.getElementById('tfT2').value = T;
+			
 			}
 	
 	        outputText4=" d<sub>0</sub>="+d0+"; d<sub>1</sub>="+d1+ "; d<sub>2</sub>="+d2+";";
